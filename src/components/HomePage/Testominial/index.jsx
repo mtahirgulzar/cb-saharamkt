@@ -42,28 +42,21 @@ const mydata = [
 function SampleNextArrow(props) {
   const { onClick } = props;
   return (
-    <section
+    <button
       className="z-30 absolute  top-[40%] -right-[14px]"
       onClick={onClick}
     >
-      <button className="">
-        <ArrowRight stroke="#FFB400" />
-      </button>
-    </section>
+      <ArrowRight stroke="#FFB400" />
+    </button>
   );
 }
 
 function SamplePrevArrow(props) {
   const { onClick } = props;
   return (
-    <section
-      className="z-30 absolute  top-[40%] -left-[14px]"
-      onClick={onClick}
-    >
-      <button className="">
-        <ArrowLeft stroke="#FFB400" />
-      </button>
-    </section>
+    <button className="z-30 absolute  top-[40%] -left-[14px]" onClick={onClick}>
+      <ArrowLeft stroke="#FFB400" />
+    </button>
   );
 }
 const Testimonial = ({ data }) => {
