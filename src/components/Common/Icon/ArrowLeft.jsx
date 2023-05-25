@@ -13,8 +13,8 @@ export default function ArrowLeft(props) {
       strokeLinejoin="round"
       className="bi bi-chevron-left"
       viewBox="1 0 16 14"
-      aria-labelledby="ArrowLeft"
-      aria-label="ArrowLeft"
+      ariaLabelledBy="ArrowLeft"
+      ariaLabel="ArrowLeft"
       {...props}
     >
       <path

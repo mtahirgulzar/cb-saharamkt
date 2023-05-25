@@ -85,15 +85,15 @@ const ContactForm = ({ data }) => {
             </div>
             <div className="mt-[30px] md:mt-[40px] lg:mt-[50px]">
               <Link href={`${data?.contactlink?.addresslink}`} legacyBehavior>
-                <a
-                  href={`${data?.contactlink?.addresslink}`}
-                  target="_blank"
-                  rel="noopener"
-                >
-                  <h3 className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[400] mb-[14px]">
+                <h3 className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[400] mb-[14px]">
+                  <a
+                    href={`${data?.contactlink?.addresslink}`}
+                    target="_blank"
+                    rel="noopener"
+                  >
                     {data?.contactlink?.addressname}
-                  </h3>
-                </a>
+                  </a>
+                </h3>
               </Link>
               <p className="text-[#6a0000] text-[16px] md:text-[17px] lg:text-[18px] lg:leading-[30px] font-[700] mb-[14px]">
                 Tel:
@@ -103,7 +103,6 @@ const ContactForm = ({ data }) => {
                 >
                   <span className=" font-[400]">
                     <a href={`tel:+${data?.contactlink?.tellink}`}>
-                      {" "}
                       {data?.contactlink?.telname}
                     </a>
                   </span>
@@ -154,7 +153,7 @@ const ContactForm = ({ data }) => {
                     onChange={(e) => setDis({ ...dis, name: e.target.value })}
                     required
                     role="input"
-                    arial-label="Please input your name"
+                    arialLabel="Please input your name"
                     type="name"
                     className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
@@ -194,12 +193,12 @@ const ContactForm = ({ data }) => {
                     onChange={(e) => setDis({ ...dis, email: e.target.value })}
                     required
                     role="input"
-                    arial-label="Please input your email"
+                    arialLabel="Please input your email"
                     type="email"
                     className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
-                
+
                 <div className="sm:w-[50%] flex flex-col md:ml-6 sm:mt-0 mt-4">
                   <label className="text-[#6a0000] leading-[16px] font-normal">
                     Company Name <span className="text-[#6a0000]">*</span>
@@ -215,14 +214,14 @@ const ContactForm = ({ data }) => {
                     }
                     required
                     role="input"
-                    arial-label="Please input your Company Name"
+                    arialLabel="Please input your Company Name"
                     type="company"
                     className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
                   />
                 </div>
               </div>
               <div className="mt-4 mb-2">
-              <label className="text-[#6a0000]">Inquiries</label>
+                <label className="text-[#6a0000]">Inquiries</label>
                 <div className="flex items-center gap-3 flex-wrap text-[#6a0000]">
                   <input
                     type="checkbox"
@@ -240,7 +239,7 @@ const ContactForm = ({ data }) => {
                   <label htmlFor="Inquiries2">Restaurant</label>
                   <input
                     type="checkbox"
-                    id="Meat & Chicken"
+                    id="Meat&Chicken"
                     name="Meat & Chicken"
                     value="Meat & Chicken"
                   />
@@ -261,7 +260,7 @@ const ContactForm = ({ data }) => {
                   <label htmlFor="Inquiries5">Bakery</label>
                   <input
                     type="checkbox"
-                    id="Fresh Produce"
+                    id="FreshProduce"
                     name="Fresh Produce"
                     value="Fresh Produce"
                   />

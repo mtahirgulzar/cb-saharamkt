@@ -13,7 +13,7 @@ const Hamburger = ({
   setIsSubmenu,
   isSubMenu1,
   setIsSubmenu1,
-  orderdropdown
+  orderdropdown,
 }) => {
   return (
     <>
@@ -85,9 +85,9 @@ const Hamburger = ({
                           {index === 1 && (
                             <>
                               <svg
-                              onClick={()=>{
-                                index === 1 && setIsSubmenu(!isSubMenu)
-                              }}
+                                onClick={() => {
+                                  index === 1 && setIsSubmenu(!isSubMenu);
+                                }}
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="12"
                                 height="12"
@@ -103,9 +103,9 @@ const Hamburger = ({
                             <>
                               <span>
                                 <svg
-                                onClick={()=>{
-                                  index === 1 && setIsSubmenu1(!isSubMenu1)
-                                }}
+                                  onClick={() => {
+                                    index === 1 && setIsSubmenu1(!isSubMenu1);
+                                  }}
                                   xmlns="http://www.w3.org/2000/svg"
                                   width="12"
                                   height="12"
@@ -167,17 +167,17 @@ const Hamburger = ({
                               href={`${item.link}`}
                               legacyBehavior
                             >
-                              <a href={`${item.link}`} className="">
-                                <li
-                                  className={`px-[30px] py-[13px] text-black transition-all ease duration-500 ${styles.cusHover}`}
+                              <li
+                                className={`px-[30px] py-[13px] text-black transition-all ease duration-500 ${styles.cusHover}`}
+                              >
+                                <p
+                                  className={`${styles.hoverText} transition-all ease duration-500 text-[12px] leading-[15px] pl-[10px]`}
                                 >
-                                  <p
-                                    className={`${styles.hoverText} transition-all ease duration-500 text-[12px] leading-[15px] pl-[10px]`}
-                                  >
+                                  <a href={`${item.link}`} className="">
                                     {item?.title}
-                                  </p>
-                                </li>
-                              </a>
+                                  </a>
+                                </p>
+                              </li>
                             </Link>
                           ))}
                         </ul>
