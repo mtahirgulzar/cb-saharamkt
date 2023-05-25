@@ -23,7 +23,7 @@ const myData = [
   },
 ];
 
-export default function HomeHero({data}) {
+export default function HomeHero({ data }) {
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -55,7 +55,10 @@ export default function HomeHero({data}) {
               <div
                 className="text-center "
                 style={{
-                  background: `url(${imageResolver(item?.img)?.path}) no-repeat center center/cover`,height:"640px"
+                  background: `url(${
+                    imageResolver(item?.img)?.path
+                  }) no-repeat center center/cover`,
+                  height: "640px",
                 }}
               >
                 <div className="bg-gradient bg-[#241818b0] bg-opacity-50 py-[240px] md:py-[270px] lg:py-[300px]">
@@ -71,11 +74,9 @@ export default function HomeHero({data}) {
                       {item.description}
                     </p>
                     <Link href={"#onlineOrder"} legacyBehavior>
-                      <a href={"#onlineOrder"}>
-                        <button className="sm:text-[17px] md:text-[18px] leading-[18px] font-[400] text-[#ffb400] hover:text-white py-3 px-6 border-[2px] transition border-[#ffb400] rounded hover:bg-[#ffb400] ">
-                          {item?.cta?.name}
-                        </button>
-                      </a>
+                      <button className="sm:text-[17px] md:text-[18px] leading-[18px] font-[400] text-[#ffb400] hover:text-white py-3 px-6 border-[2px] transition border-[#ffb400] rounded hover:bg-[#ffb400] ">
+                        <a href={"#onlineOrder"}>{item?.cta?.name}</a>
+                      </button>
                     </Link>
                   </div>
                 </div>
