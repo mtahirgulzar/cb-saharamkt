@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Slider from "react-slick";
 import { imageResolver } from "@/utils/helpers";
+import { useRouter } from "next/router";
 const myData = [
   {
     img: "images/HomeHero.jpg",
@@ -24,6 +25,7 @@ const myData = [
 ];
 
 export default function HomeHero({ data }) {
+  const router = useRouter();
   function SampleNextArrow(props) {
     const { className, style, onClick } = props;
     return (
@@ -73,11 +75,12 @@ export default function HomeHero({ data }) {
                     <p className="mb-[30px] text-[20px] sm:text-[25px] md:text-[28px] lg:text-[30px] leading-[33px] md:leading-[42px]  font-[600] text-[#ffb400] ">
                       {item.description}
                     </p>
-                    <Link href={"#onlineOrder"} legacyBehavior>
-                      <button className="sm:text-[17px] md:text-[18px] leading-[18px] font-[400] text-[#ffb400] hover:text-white py-3 px-6 border-[2px] transition border-[#ffb400] rounded hover:bg-[#ffb400] ">
-                        <a href={"#onlineOrder"}>{item?.cta?.name}</a>
-                      </button>
-                    </Link>
+                    <button
+                      onClick={() => router.push("#onlineOrder")}
+                      className="sm:text-[17px] md:text-[18px] leading-[18px] font-[400] text-[#ffb400] hover:text-white py-3 px-6 border-[2px] transition border-[#ffb400] rounded hover:bg-[#ffb400] "
+                    >
+                      {item?.cta?.name}
+                    </button>
                   </div>
                 </div>
               </div>

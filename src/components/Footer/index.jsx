@@ -19,7 +19,7 @@ export default function Footer({ data }) {
 
     return () => clearInterval(intervalId);
   }, []);
-  
+
   const router = useRouter();
   const currentRoute = router.pathname.slice(0);
   const [isSubMenu, setIsSubmenu] = useState(false);
@@ -95,13 +95,11 @@ export default function Footer({ data }) {
               </span>
             </Link>
           </div>
-          <Link href={`${data?.cta?.link}`} legacyBehavior>
-            <div className="hover:cursor-pointer border-[2px] border-[#FFC648] text-[#FFC648] hover:text-[#6A0000] font-[700] hover:bg-[#FFC648] transition-all duration-300 mt-5 px-4 py-1 inline-flex  rounded-[3px]">
-              <button>
-                <a href={`${data?.cta?.link}`}>{data?.cta?.name}</a>
-              </button>
-            </div>
-          </Link>
+          <div className="hover:cursor-pointer border-[2px] border-[#FFC648] text-[#FFC648] hover:text-[#6A0000] font-[700] hover:bg-[#FFC648] transition-all duration-300 mt-5 px-4 py-1 inline-flex  rounded-[3px]">
+            <button onClick={() => router.push(data?.cta?.link)}>
+              {data?.cta?.name}
+            </button>
+          </div>
         </div>
         <div className="md:w-[50%] sm:flex mt-[50px] md:mt-0">
           <div className="px-4 sm:w-1/2">
@@ -155,7 +153,7 @@ export default function Footer({ data }) {
       <div className="max-w-[1140px] px-4 mx-auto h-[1px] bg-white mt-[30px] " />
       <div className="">
         <div className="text-center text-[14px] font-[400] text-white py-[20px] px-4">
-        © {year}
+          © {year}
           <span className="hover:text-[#FFC648] transition-all duration-300 font-[500]">
             <Link href={`${data?.links?.companylink}`} legacyBehavior>
               <a href={`${data?.links?.companylink}`}>
