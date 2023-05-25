@@ -152,7 +152,7 @@ const ContactForm = ({ data }) => {
                     name="name"
                     onChange={(e) => setDis({ ...dis, name: e.target.value })}
                     required
-                    role="input"
+                    // role="input"
                     arialLabel="Please input your name"
                     type="name"
                     className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
@@ -192,7 +192,7 @@ const ContactForm = ({ data }) => {
                     name="email"
                     onChange={(e) => setDis({ ...dis, email: e.target.value })}
                     required
-                    role="input"
+                    // role="input"
                     arialLabel="Please input your email"
                     type="email"
                     className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
@@ -213,7 +213,7 @@ const ContactForm = ({ data }) => {
                       setDis({ ...dis, company: e.target.value })
                     }
                     required
-                    role="input"
+                    // role="input"
                     arialLabel="Please input your Company Name"
                     type="company"
                     className="outline-[#6a0000]. text-[#6a0000]  p-3  mt-2 text-base leading-none  border border-[#6a0000] rounded focus:oultine-none"
@@ -284,7 +284,7 @@ const ContactForm = ({ data }) => {
                       setDis({ ...dis, message: e.target.value })
                     }
                     aria-label="leave a message"
-                    role="textbox"
+                    // role="textbox"
                     type="name"
                     className="outline-[#6a0000]. text-[#6a0000] p-3 mt-2 text-base leading-none border border-[#6a0000] rounded resize-none h-28 focus:oultine-none "
                   />
