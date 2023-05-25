@@ -1,8 +1,9 @@
 import React from "react";
-import Link from "next/link";
 import { imageResolver } from "@/utils/helpers";
+import { useRouter } from "next/router";
 
 const CardItem = ({ title, button, link, image }) => {
+const router = useRouter()
   return (
     <div className=" relative  max-w-[305px] max-h-[330px] bg-red-600 mx-auto">
       <div className="text-center ">
@@ -19,11 +20,9 @@ const CardItem = ({ title, button, link, image }) => {
             <h2 className="text-[#FFB400] font-bold leading-[1] text-[24px]">
               {title}
             </h2>
-            <Link href={`${link}`}>
-              <button className="mt-[20px] text-[#6A0000] bg-[#FFB400] text-center text-[16px]  font-bold leading-[1] py-[15px] px-[10px] rounded duration-300 transition-all hover:bg-[#6A0000] hover:text-[#FFC648] hover:border-[#FFC648] border-[2px] border-[#6A0000]">
+              <button onClick={() => router.push(link)} className="mt-[20px] text-[#6A0000] bg-[#FFB400] text-center text-[16px]  font-bold leading-[1] py-[15px] px-[10px] rounded duration-300 transition-all hover:bg-[#6A0000] hover:text-[#FFC648] hover:border-[#FFC648] border-[2px] border-[#6A0000]">
                 {button}
               </button>
-            </Link>
           </div>
         </div>
       </div>
